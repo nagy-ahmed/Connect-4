@@ -45,7 +45,7 @@ def receive_data():
                     flag += 1
                     gameOver(board)
                     if winningMove(board, 2):
-                        label = myfont.render("Player 1 wins !!!", 1, yellow)
+                        label = myfont.render("Player 1 wins !!!", 1, red)
                         screen.blit(label, (40, 10))
                         pygame.display.update()
                         pygame.time.wait(5000)
@@ -134,7 +134,10 @@ width = col_count * squaresize
 height = (row_count + 1) * squaresize
 size = (width, height)
 radius = int(squaresize / 2 - 5)
+
 screen = pygame.display.set_mode(size)
+pygame.display.set_caption('Player 2')
+
 
 drawBoard(board)
 
@@ -185,7 +188,7 @@ while True:
 
 
                     if winningMove(board, 1):
-                        label= myfont.render("You wins !!!", 1, red)
+                        label= myfont.render("You wins !!!", 1, yellow)
                         screen.blit(label, (40,10))
                         pygame.display.update()
                         pygame.time.wait(5000)

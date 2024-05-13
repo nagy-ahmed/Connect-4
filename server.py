@@ -151,7 +151,9 @@ width=col_count*squaresize
 height=(row_count+1)*squaresize
 size=(width,height)
 radius=int(squaresize/2-5)
+
 screen=pygame.display.set_mode(size)
+pygame.display.set_caption('Player 1')
 
 drawBoard(board)
 # pygame.display.update()
